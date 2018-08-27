@@ -1,7 +1,7 @@
 import requests
 
 def incident_request():
-    url = 'https://dev68698.service-now.com/api/now/table/incident?sysparm_query=assigned_toISEMPTY&sysparm_limit=5'
+    url = 'https://dev68698.service-now.com/api/now/table/incident?sysparm_query=assigned_toISEMPTY&sysparm_limit=200'
     user = 'admin'
     pwd = 'Ycw8RO8osZbW'
     headers = {"Content-Type":"application/json","Accept":"application/json"}
@@ -13,7 +13,7 @@ def incident_request():
     data = '{}'.format(data)
     data = data.split(',')
     return data
-
+## test func was able to keep vars in side and also in a loop.
 def print_vars():
     inc_vars = incident_request()
     for x in inc_vars:
@@ -28,4 +28,4 @@ def print_vars():
             created_by = created_by[1]
             created_by = created_by.replace("'",'')
             print('Incident{} Is open and Unassigned by{}'.format(incident_number,created_by))
-            
+print_vars()
