@@ -24,7 +24,6 @@ def Start(x,y):
 
 def call_request(x,y):
     inc_url = 'https://dev68698.service-now.com/api/now/table/new_call_list?sysparm_query=call_typeISEMPTY&sysparm_limit=100'
-    ## These should be put in shellcode ? and hash check this script after aproval is good to go
     #user = 'admin'
     #pwd = 'Ycw8RO8osZbW'
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
@@ -42,7 +41,6 @@ def call_request(x,y):
 
 def print_open_call(x,y):
     inc_vars = call_request(x,y)
-    #debug logs why are you here? ask joey pena Managed Services if your confused
     for x in inc_vars:
         if "{'result': []}"in x:
             return False
@@ -59,7 +57,7 @@ def print_open_call(x,y):
 
 def call_final_check(x,y):
     if print_open_call(x,y) == True :
-        os.system('start https://wwtms.service-now.com/nav_to.do?uri=%2Fnew_call_list.do%3Fsysparm_userpref_module%3Dcc9b823d13ed5b00c73dbe322244b09d%26sysparm_query%3Dcall_type%3D%5EEQ%26sysparm_clear_stack%3Dtrue')
+        os.system('start https://https://dev68698.service-now.com/nav_to.do?uri=%2Fnew_call_list.do%3Fsysparm_userpref_module%3Dcc9b823d13ed5b00c73dbe322244b09d%26sysparm_query%3Dcall_type%3D%5EEQ%26sysparm_clear_stack%3Dtrue')
     elif print_open_call(x,y) == False:
         time.sleep(300)
         call_final_check(x,y)
