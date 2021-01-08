@@ -32,7 +32,6 @@ def Start(x, y):
 def incident_request(x, y):
     ###fix this query!!! i need active and empty group
     inc_url = 'https://dev68698.service-now.com/api/now/table/incident?sysparm_query=active=true^assignment_groupISEMPTY=truesysparm_limit=10'
-    ## These should be put in shellcode and hash check this script after aproval is good to go
     # user = 'admin'
     # pwd = 'Ycw8RO8osZbW'
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
@@ -50,7 +49,6 @@ def incident_request(x, y):
 
 # def call_request(x,y):
 #    inc_url = 'https://dev68698.service-now.com/api/now/table/new_call_list?sysparm_query=call_typeISEMPTY&sysparm_limit=100'
-#    ## These should be put in shellcode ? and hash check this script after aproval is good to go
 #    #user = 'admin'
 #    #pwd = 'Ycw8RO8osZbW'
 #    headers = {"Content-Type": "application/json", "Accept": "application/json"}
@@ -68,7 +66,7 @@ def incident_request(x, y):
 # should work with large requests but will stop at one and open link
 def print_open_inc(x, y):
     inc_vars = incident_request(x, y)
-    # debug logs why are you here? ask joey pena Managed Services if your confused
+    # debug logs why are you here? 
     for x in inc_vars:
         if "{'result': []}" in x:
             return False
@@ -90,7 +88,7 @@ def print_open_inc(x, y):
 
 # def print_open_call(x,y):
 #    inc_vars = call_request(x,y)
-#    #debug logs why are you here? ask joey pena Managed Services if your confused
+#  
 #    for x in inc_vars:
 #        if "{'result': []}"in x:
 #            return False
