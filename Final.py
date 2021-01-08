@@ -99,7 +99,7 @@ def print_open_call(x,y):
 
 def inc_final_check(x,y):
     if print_open_inc(x,y) == True :
-        os.system('start https://wwtms.service-now.com/nav_to.do?uri=%2Fincident_list.do%3Fsysparm_query%3Dactive%253Dtrue%255Eassignment_groupISEMPTY%26sysparm_first_row%3D1%26sysparm_view%3D')
+        os.system('start https://dev68698.service-now.com/nav_to.do?uri=%2Fincident_list.do%3Fsysparm_query%3Dactive%253Dtrue%255Eassignment_groupISEMPTY%26sysparm_first_row%3D1%26sysparm_view%3D')
     elif print_open_inc(x.y) == False:
         time.sleep(300)
         inc_final_check(x,y)
@@ -109,7 +109,7 @@ def inc_final_check(x,y):
 
 def call_final_check(x,y):
     if print_open_call(x,y) == True :
-        os.system('start https://wwtms.service-now.com/nav_to.do?uri=%2Fnew_call_list.do%3Fsysparm_userpref_module%3Dcc9b823d13ed5b00c73dbe322244b09d%26sysparm_query%3Dcall_type%3D%5EEQ%26sysparm_clear_stack%3Dtrue')
+        os.system('start https://dev68698.service-now.com/nav_to.do?uri=%2Fnew_call_list.do%3Fsysparm_userpref_module%3Dcc9b823d13ed5b00c73dbe322244b09d%26sysparm_query%3Dcall_type%3D%5EEQ%26sysparm_clear_stack%3Dtrue')
     elif print_open_call(x,y) == False:
         time.sleep(300)
         call_final_check(x,y)
